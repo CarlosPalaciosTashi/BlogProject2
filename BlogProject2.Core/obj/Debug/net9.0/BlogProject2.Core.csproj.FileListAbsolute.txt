@@ -1,0 +1,12 @@
+/Users/carlospalacios/Desktop/CarlosProjects/BlogProject2/BlogProject2.Core/bin/Debug/net9.0/BlogProject2.Core.deps.json
+/Users/carlospalacios/Desktop/CarlosProjects/BlogProject2/BlogProject2.Core/bin/Debug/net9.0/BlogProject2.Core.dll
+/Users/carlospalacios/Desktop/CarlosProjects/BlogProject2/BlogProject2.Core/bin/Debug/net9.0/BlogProject2.Core.pdb
+/Users/carlospalacios/Desktop/CarlosProjects/BlogProject2/BlogProject2.Core/obj/Debug/net9.0/BlogProject2.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/carlospalacios/Desktop/CarlosProjects/BlogProject2/BlogProject2.Core/obj/Debug/net9.0/BlogProject2.Core.AssemblyInfoInputs.cache
+/Users/carlospalacios/Desktop/CarlosProjects/BlogProject2/BlogProject2.Core/obj/Debug/net9.0/BlogProject2.Core.AssemblyInfo.cs
+/Users/carlospalacios/Desktop/CarlosProjects/BlogProject2/BlogProject2.Core/obj/Debug/net9.0/BlogProject2.Core.csproj.CoreCompileInputs.cache
+/Users/carlospalacios/Desktop/CarlosProjects/BlogProject2/BlogProject2.Core/obj/Debug/net9.0/BlogProject2.Core.dll
+/Users/carlospalacios/Desktop/CarlosProjects/BlogProject2/BlogProject2.Core/obj/Debug/net9.0/refint/BlogProject2.Core.dll
+/Users/carlospalacios/Desktop/CarlosProjects/BlogProject2/BlogProject2.Core/obj/Debug/net9.0/BlogProject2.Core.pdb
+/Users/carlospalacios/Desktop/CarlosProjects/BlogProject2/BlogProject2.Core/obj/Debug/net9.0/ref/BlogProject2.Core.dll
+/Users/carlospalacios/Desktop/CarlosProjects/BlogProject2/BlogProject2.Core/obj/Debug/net9.0/BlogProject2.Core.csproj.AssemblyReference.cache
