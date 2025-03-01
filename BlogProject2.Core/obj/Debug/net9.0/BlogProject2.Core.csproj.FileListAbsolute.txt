@@ -10,3 +10,4 @@
 /Users/carlospalacios/Desktop/CarlosProjects/BlogProject2/BlogProject2.Core/obj/Debug/net9.0/BlogProject2.Core.pdb
 /Users/carlospalacios/Desktop/CarlosProjects/BlogProject2/BlogProject2.Core/obj/Debug/net9.0/ref/BlogProject2.Core.dll
 /Users/carlospalacios/Desktop/CarlosProjects/BlogProject2/BlogProject2.Core/obj/Debug/net9.0/BlogProject2.Core.csproj.AssemblyReference.cache
+/Users/carlospalacios/Desktop/CarlosProjects/BlogProject2/BlogProject2.Core/obj/Debug/net9.0/BlogProject2.Core.sourcelink.json

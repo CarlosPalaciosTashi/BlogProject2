@@ -1,0 +1,22 @@
+# Evitar carpetas de compilación y depuración
+bin/
+obj/
+out/
+
+# Archivos de configuración de Visual Studio
+.vs/
+*.suo
+*.user
+*.csproj.user
+
+# Archivos de paquetes NuGet
+packages/
+*.nupkg
+*.snupkg
+project.lock.json
+project.assets.json
+
+# Configuración local y secretos
+appsettings.Development.json
+secrets.json
+
