@@ -56,7 +56,7 @@ namespace BlogProject2.Web.Areas.Admin.Controllers
                 {
 
                     string fileName = Guid.NewGuid().ToString();
-                    var uploads = Path.Combine(mainRoot, @"Images/Articles/");
+                    var uploads = Path.Combine(mainRoot, @"Images/Articles");
                     var extension = Path.GetExtension(files[0].FileName);
 
                     using (var fileStreams = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
@@ -64,7 +64,7 @@ namespace BlogProject2.Web.Areas.Admin.Controllers
                         files[0].CopyTo(fileStreams);
                     }
 
-                    artVM.Article.UrlImage = @"Images/Articles/" + fileName + extension;
+                    artVM.Article.UrlImage = @"/Images/Articles/" + fileName + extension;
                     artVM.Article.CreationDate = DateTime.Now.ToString();
 
                     _workUnit.Article.Add(artVM.Article);
