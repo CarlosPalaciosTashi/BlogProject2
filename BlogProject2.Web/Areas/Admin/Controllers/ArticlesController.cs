@@ -86,24 +86,89 @@ namespace BlogProject2.Web.Areas.Admin.Controllers
         }
 
 
-    [HttpGet]
-    public IActionResult Edit(int id){
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
 
-        ArticleViewModel artVM = new ArticleViewModel(){
+            ArticleViewModel artVM = new ArticleViewModel()
+            {
 
-            Article = new BlogProject2.Core.Article(),
-            CategoriesList = _workUnit.Category.GetCategoriesList()
-        };
+                Article = new BlogProject2.Core.Article(),
+                CategoriesList = _workUnit.Category.GetCategoriesList()
+            };
 
-        if(id != 0){
+            if (id != 0)
+            {
 
-            artVM.Article = _workUnit.Article.Get(id);
+                artVM.Article = _workUnit.Article.Get(id);
+            }
+
+            return View(artVM);
         }
 
-        return View(artVM);
-    }
 
-        
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(ArticleViewModel artVM)
+        {
+            if (ModelState.IsValid)
+            {
+                string mainRoot = _hostingEnvironment.WebRootPath;
+                var files = HttpContext.Request.Form.Files;
+
+                var artFromDb = _workUnit.Article.Get(artVM.Article.Id);
+
+                if (files.Count() > 0)
+                {
+
+                    //New article image
+                    string fileName = Guid.NewGuid().ToString();
+                    var uploads = Path.Combine(mainRoot, @"Images/Articles");
+                    var extension = Path.GetExtension(files[0].FileName);
+                    var newExtension = Path.GetExtension(files[0].FileName);
+
+                    var imageRoute = Path.Combine(mainRoot, artFromDb.UrlImage.TrimStart('\\'));
+
+                    if (System.IO.File.Exists(imageRoute))
+                    {
+
+                        System.IO.File.Delete(imageRoute);
+                    }
+
+                    using (var fileStreams = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
+                    {
+                        files[0].CopyTo(fileStreams);
+                    }
+
+                    artVM.Article.UrlImage = @"/Images/Articles/" + fileName + extension;
+                    artVM.Article.CreationDate = DateTime.Now.ToString();
+
+                    _workUnit.Article.Update(artVM.Article);
+                    _workUnit.Save();
+
+                    return RedirectToAction(nameof(Index));
+
+                }
+                else
+                {
+
+                    artVM.Article.UrlImage = artFromDb.UrlImage;
+
+
+                }
+
+                _workUnit.Article.Update(artVM.Article);
+                _workUnit.Save();
+
+                return RedirectToAction(nameof(Index));
+
+            }
+
+            artVM.CategoriesList = _workUnit.Category.GetCategoriesList();
+            return View(artVM);
+        }
+
 
         // API REGION //
 
