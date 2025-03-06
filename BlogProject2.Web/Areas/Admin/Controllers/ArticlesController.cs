@@ -128,7 +128,7 @@ namespace BlogProject2.Web.Areas.Admin.Controllers
                     var extension = Path.GetExtension(files[0].FileName);
                     var newExtension = Path.GetExtension(files[0].FileName);
 
-                    var imageRoute = Path.Combine(mainRoot, artFromDb.UrlImage.TrimStart('\\'));
+                    var imageRoute = Path.Combine(mainRoot, artFromDb.UrlImage.TrimStart('/'));
 
                     if (System.IO.File.Exists(imageRoute))
                     {
@@ -177,6 +177,34 @@ namespace BlogProject2.Web.Areas.Admin.Controllers
         {
 
             return Json(new { data = _workUnit.Article.GetAll(includeProperties: "Category") });
+        }
+
+
+        [HttpDelete]
+        public IActionResult Delete(int id)
+        {
+
+            var objectFromDb = _workUnit.Article.Get(id);
+            string mainRoot = _hostingEnvironment.WebRootPath;
+            var imageRoute = Path.Combine(mainRoot, objectFromDb.UrlImage.TrimStart('/'));
+
+            if (System.IO.File.Exists(imageRoute))
+            {
+
+                System.IO.File.Delete(imageRoute);
+            }
+
+            if (objectFromDb == null)
+            {
+
+                return Json(new { success = false, message = "Error deleting article" });
+            }
+
+            _workUnit.Article.Remove(objectFromDb);
+            _workUnit.Save();
+
+            return Json(new { success = true, message = "Article deleted" });
+
         }
 
 

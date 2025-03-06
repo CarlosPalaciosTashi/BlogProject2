@@ -241,5 +241,5 @@
 /Users/carlospalacios/Desktop/CarlosProjects/BlogProject2/BlogProject2.Web/bin/Debug/net9.0/Newtonsoft.Json.dll
 /Users/carlospalacios/Desktop/CarlosProjects/BlogProject2/BlogProject2.Web/bin/Debug/net9.0/Newtonsoft.Json.Bson.dll
 /Users/carlospalacios/Desktop/CarlosProjects/BlogProject2/BlogProject2.Web/obj/Debug/net9.0/compressed/cb466ekgmu-mqk5udpgss.gz
-/Users/carlospalacios/Desktop/CarlosProjects/BlogProject2/BlogProject2.Web/obj/Debug/net9.0/compressed/wkcrf95l2g-bintysq17n.gz
 /Users/carlospalacios/Desktop/CarlosProjects/BlogProject2/BlogProject2.Web/obj/Debug/net9.0/BlogProject2.Web.sourcelink.json
+/Users/carlospalacios/Desktop/CarlosProjects/BlogProject2/BlogProject2.Web/obj/Debug/net9.0/compressed/wkcrf95l2g-91l19rojsl.gz

@@ -16,6 +16,12 @@ function loadDatatable() {
             { "data": "id", "width": "5%" },
             { "data": "name", "width": "20%" },
             { "data": "category.name", "width": "15%" },
+            {
+                "data": "urlImage",
+                "render": function (image){
+                    return `<img src="../${image}" width="120px">
+                }
+            },
             { "data": "creationDate", "width": "30%" },
             {
                 "data": "id",
@@ -61,7 +67,7 @@ function Delete(url) {
                     console.log("Y por aqui");
                 }
                 else {
-        
+
                     toastr.error(data.message);
                 }
             }
